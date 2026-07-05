@@ -68,7 +68,6 @@
         .vertical-slider {
             -webkit-appearance: none; appearance: none; width: 180px; height: 12px; border-radius: 10px; outline: none; position: absolute;
             transform: rotate(-90deg);
-            /* تم عكس التدرج: أخضر في الأسفل (اليسار)، أحمر في الأعلى (اليمين) */
             background: linear-gradient(to right, #2ed573 0%, #eccc68 50%, #ff4757 100%);
             box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -107,7 +106,6 @@
            ========================================== */
         .gifts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; margin-top: 1rem; }
         
-        /* تنسيق الصور كبديل للمربعات */
         .gift-img { 
             width: 100%; 
             aspect-ratio: 1 / 1; 
@@ -159,7 +157,7 @@
         <div class="card">
             <h2>عيد ميلاد مين اليوم؟ 🎀</h2>
             <div class="btn-container-s1">
-                <button id="btn-no" class="btn btn-secondary">لا أعرف</button>
+                <button id="btn-no" class="btn btn-secondary">ما بعرف 😛</button>
                 <button id="btn-yes" class="btn btn-primary">أنا!</button>
             </div>
         </div>
@@ -167,30 +165,30 @@
 
     <section id="scene-2" class="scene">
         <div class="card">
-            <h2>كنتي متوقعة إني أهتم كثير ليوم زي هيك؟</h2>
+            <h2>كم تتوقعي نسبة حماسي لليوم ؟</h2>
             <div class="slider-wrapper">
-                <span class="slider-label" style="color: #ff4757;">لا</span>
+                <span class="slider-label" style="color: #ff4757;">0%</span>
                 <div class="slider-container">
                     <input type="range" id="love-slider" class="vertical-slider" min="0" max="100" value="50">
                 </div>
                 <div id="sad-emoji">😢</div>
-                <span class="slider-label" style="color: #2ed573;">نعم</span>
+                <span class="slider-label" style="color: #2ed573;">100%</span>
             </div>
         </div>
     </section>
 
     <section id="scene-3" class="scene">
         <div class="card">
-            <h2>اسحبي إصبعك لتقطيع الكيكة! 🎂</h2>
+            <h2>اقطعي الكيكة!</h2>
             <div class="cake-container" id="cake-wrapper">
-                <img src="Cake2.PNG" id="the-cake" class="simple-cake" alt="Cake" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'320\' height=\'320\' viewBox=\'0 0 100 100\'><path d=\'M20 70 Q 50 85 80 70 L 80 40 Q 50 55 20 40 Z\' fill=\'%23E8B4B8\'/><path d=\'M20 40 Q 50 55 80 40 Q 50 25 20 40 Z\' fill=\'%23FAF3F3\' stroke=\'%23A4777E\' stroke-width=\'1.5\'/><rect x=\'48\' y=\'15\' width=\'4\' height=\'15\' fill=\'%23A4777E\' rx=\'2\'/><circle cx=\'50\' cy=\'10\' r=\'3.5\' fill=\'%23D4AF37\'/></svg>'">
+                <img src="cake.png" id="the-cake" class="simple-cake" alt="Cake" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'320\' height=\'320\' viewBox=\'0 0 100 100\'><path d=\'M20 70 Q 50 85 80 70 L 80 40 Q 50 55 20 40 Z\' fill=\'%23E8B4B8\'/><path d=\'M20 40 Q 50 55 80 40 Q 50 25 20 40 Z\' fill=\'%23FAF3F3\' stroke=\'%23A4777E\' stroke-width=\'1.5\'/><rect x=\'48\' y=\'15\' width=\'4\' height=\'15\' fill=\'%23A4777E\' rx=\'2\'/><circle cx=\'50\' cy=\'10\' r=\'3.5\' fill=\'%23D4AF37\'/></svg>'">
             </div>
         </div>
     </section>
 
     <section id="scene-4" class="scene">
         <div class="card">
-            <h2>عندك رسالة 💌</h2>
+            <h2>عندي الك رسالة افتحيها!</h2>
             <div class="envelope-wrapper" id="envelope-wrapper">
                 <div class="envelope-front"></div>
                 <div class="envelope-flap"></div>
@@ -204,19 +202,19 @@
             <div class="letter-header" id="recipient-name">عزيزتي</div>
             <p class="letter-body" id="birthday-message">النص يوضع هنا.</p>
             <div class="letter-footer" id="sender-name"></div>
-            <button id="btn-go-gifts" class="btn btn-primary btn-full">التالي ✨</button>
+            <button id="btn-go-gifts" class="btn btn-primary btn-full">كملي ما خلصنا!</button>
         </article>
     </div>
 
     <section id="scene-gifts" class="scene">
         <div class="card">
-            <h2>هدايا إلك :) 🎁</h2>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">اضغطي على أي صورة لفتحها</p>
+            <h2>هدايا صغيرة الك!</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">اختاري اللي بدك اياها</p>
             <div class="gifts-grid">
-                <img src="Cake2.PNG" class="gift-img" onclick="openGift('gift-1')" alt="هدية 1">
-                <img src="Cake2.PNG" class="gift-img" onclick="openGift('gift-2')" alt="هدية 2">
-                <img src="Cake2.PNG" class="gift-img" onclick="openGift('gift-3')" alt="هدية 3">
-                <img src="Cake2.PNG" class="gift-img" onclick="openGift('gift-4')" alt="هدية 4">
+                <img src="https://via.placeholder.com/300/E8B4B8/FFFFFF?text=صورة+1" class="gift-img" onclick="openGift('gift-1')" alt="هدية 1">
+                <img src="https://via.placeholder.com/300/A4777E/FFFFFF?text=صورة+2" class="gift-img" onclick="openGift('gift-2')" alt="هدية 2">
+                <img src="https://via.placeholder.com/300/E8B4B8/FFFFFF?text=صورة+3" class="gift-img" onclick="openGift('gift-3')" alt="هدية 3">
+                <img src="https://via.placeholder.com/300/A4777E/FFFFFF?text=صورة+4" class="gift-img" onclick="openGift('gift-4')" alt="هدية 4">
             </div>
         </div>
     </section>
@@ -225,7 +223,7 @@
         <div class="card">
             <h2>🎵 موسيقى</h2>
             <p class="gift-content">مكان مخصص لوضع مشغل موسيقى أو أغنية مفضلة.</p>
-            <button class="btn btn-secondary btn-full" onclick="backToGifts('gift-1')">رجوع للهدايا</button>
+            <button class="btn btn-secondary btn-full" onclick="backToGifts('gift-1')">رجوعللهدايا</button>
         </div>
     </section>
 
@@ -233,7 +231,7 @@
         <div class="card">
             <h2>📸 صور</h2>
             <p class="gift-content">مكان مخصص لعرض ألبوم صور أو ذكريات بصرية.</p>
-            <button class="btn btn-secondary btn-full" onclick="backToGifts('gift-2')">رجوع للهدايا</button>
+            <button class="btn btn-secondary btn-full" onclick="backToGifts('gift-2')">رجوعللهدايا</button>
         </div>
     </section>
 
@@ -241,7 +239,7 @@
         <div class="card">
             <h2>💌 ذكريات</h2>
             <p class="gift-content">مكان مخصص لكتابة ذكريات ومواقف مميزة.</p>
-            <button class="btn btn-secondary btn-full" onclick="backToGifts('gift-3')">رجوع للهدايا</button>
+            <button class="btn btn-secondary btn-full" onclick="backToGifts('gift-3')">رجوعللهدايا</button>
         </div>
     </section>
 
@@ -249,7 +247,7 @@
         <div class="card">
             <h2>✨ مفاجأة</h2>
             <p class="gift-content">مكان مخصص لأي مفاجأة إضافية أو رابط خاص.</p>
-            <button class="btn btn-secondary btn-full" onclick="backToGifts('gift-4')">رجوع للهدايا</button>
+            <button class="btn btn-secondary btn-full" onclick="backToGifts('gift-4')">رجوعللهدايا</button>
         </div>
     </section>
 
